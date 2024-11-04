@@ -1,1 +1,5 @@
-# EJERCICIO---MongoDB-Mongoose---API-REST-con-Express
+# ft-sep24-BackendJS-examples
+
+### En este repositorio encontrarás ejemplos utilizados en clase correspondientes al módulo de `Backend`
+
+![npminstall!](./assets/node_modules_meme.png)
