@@ -1,9 +1,10 @@
+//const fetch = require('node-fetch');
+
 const productsController = require('../controllers/products.controller');
 const router = require('express').Router();
 
-router.get("/:id?", productsController.getProduct);
 /*
-POST h http://localhost:3000/api/products
+POST /products
 
 A enviar por Body:
 {
@@ -18,8 +19,19 @@ A enviar por Body:
     }
 }
 */
+// http://localhost:3000/api/products
+router.get("/", productsController.getAllProducts);
+
+// http://localhost:3000/api/products/id
+router.get("/:id?", productsController.getOneProduct);
+
+// http://localhost:3000/api/products/
 router.post("/", productsController.createProduct);
-router.put("/", productsController.editProduct);
+
+// http://localhost:3000/api/products/
+router.put("/:id", productsController.updateProduct);
+
+// http://localhost:3000/api/products/1
 router.delete("/:id?", productsController.deleteProduct);
 
 module.exports = router;
